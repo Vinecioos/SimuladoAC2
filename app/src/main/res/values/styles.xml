@@ -1,0 +1,12 @@
+<resources>
+    <style name="Theme.FilmesSeries" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#5B4BDB</item>
+        <item name="colorPrimaryVariant">#4034A8</item>
+        <item name="colorSecondary">#FFB74D</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">#F5F4FA</item>
+        <item name="android:navigationBarColor">#F5F4FA</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

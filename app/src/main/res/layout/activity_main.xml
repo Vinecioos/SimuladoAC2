@@ -1,0 +1,54 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#F5F4FA" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="18dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Minha biblioteca" android:textColor="#24213A" android:textSize="28sp"
+            android:textStyle="bold"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Organize filmes, séries e o que você quer assistir."
+            android:textColor="#686579" android:textSize="14sp" android:paddingBottom="16dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Nome" android:textStyle="bold" android:textColor="#343149"/>
+        <EditText android:id="@+id/editNome" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Ex.: Interestelar" android:singleLine="true" android:inputType="textCapSentences"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Tipo" android:textStyle="bold" android:textColor="#343149" android:paddingTop="5dp"/>
+        <Spinner android:id="@+id/spinnerTipo" android:layout_width="match_parent" android:layout_height="48dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Gênero" android:textStyle="bold" android:textColor="#343149" android:paddingTop="5dp"/>
+        <Spinner android:id="@+id/spinnerGenero" android:layout_width="match_parent" android:layout_height="48dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:paddingEnd="8dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ano" android:textStyle="bold" android:textColor="#343149"/>
+                <EditText android:id="@+id/editAno" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="2024" android:inputType="number" android:maxLength="4"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:paddingStart="8dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nota (0 a 10)" android:textStyle="bold" android:textColor="#343149"/>
+                <EditText android:id="@+id/editNota" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="8.5" android:inputType="numberDecimal"/>
+            </LinearLayout>
+        </LinearLayout>
+        <CheckBox android:id="@+id/checkAssistiu" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Já assisti"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="4dp">
+            <Button android:id="@+id/btnSalvar" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Salvar"/>
+            <Button android:id="@+id/btnLimpar" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Limpar"/>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Sua coleção" android:textColor="#24213A" android:textSize="22sp" android:textStyle="bold" android:paddingTop="20dp"/>
+        <EditText android:id="@+id/editBusca" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Buscar por nome..." android:singleLine="true" android:inputType="text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Filtrar por tipo" android:textStyle="bold" android:textColor="#343149"/>
+        <Spinner android:id="@+id/spinnerFiltro" android:layout_width="match_parent" android:layout_height="48dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Toque em um item para editar. Pressione e segure para excluir."
+            android:textColor="#686579" android:textSize="12sp" android:paddingTop="6dp" android:paddingBottom="6dp"/>
+        <ListView android:id="@+id/listaObras" android:layout_width="match_parent" android:layout_height="380dp"
+            android:divider="#DDD9EB" android:dividerHeight="1dp" android:background="#FFFFFF"
+            android:padding="5dp"/>
+        <TextView android:id="@+id/textVazio" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Carregando coleção..." android:gravity="center" android:textColor="#686579" android:padding="12dp"/>
+    </LinearLayout>
+</ScrollView>
